@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<head><title>Admin</title></head>
+<body>
+<h1>Admin Page</h1>
+<p th:inline="text">Welcome, <span th:remove="tag" sec:authentication="name"></span>!</p>
+<p><a th:href="@{/home}">Back to Home</a></p>
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+</body>
+</html>

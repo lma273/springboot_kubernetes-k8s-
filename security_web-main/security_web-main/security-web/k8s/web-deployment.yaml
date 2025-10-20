@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: security-web
+spec:
+  selector:
+    matchLabels:
+      app: security-web
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: security-web
+    spec:
+      containers:
+        - name: security-web
+          image: security-web:latest
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8081
+          env:
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysql:3306/securitydb
+            - name: SPRING_DATASOURCE_USERNAME
+              value: root
+            - name: SPRING_DATASOURCE_PASSWORD
+              value: root123

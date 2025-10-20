@@ -1,0 +1,10 @@
+com\example\securityweb\repository\RoleRepository.class
+com\example\securityweb\DataLoader.class
+com\example\securityweb\service\MyUserDetailsService.class
+com\example\securityweb\HomeController.class
+com\example\securityweb\MvcConfig.class
+com\example\securityweb\model\User.class
+com\example\securityweb\WebSecurityConfig.class
+com\example\securityweb\SecuringWebApplication.class
+com\example\securityweb\repository\UserRepository.class
+com\example\securityweb\model\Role.class
